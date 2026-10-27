@@ -1,0 +1,30 @@
+{
+    "cookiecutter": {
+        "codeowner_github_usernames": "icovada",
+        "full_name": "Network to Code, LLC",
+        "email": "federico@tabbo.it",
+        "github_org": "nautobot",
+        "app_name": "granular_field_permissions",
+        "verbose_name": "Granular Field Permissions",
+        "app_slug": "granular-field-permissions",
+        "project_slug": "nautobot-app-granular-field-permissions",
+        "repo_url": "https://github.com/nautobot/nautobot-app-granular-field-permissions",
+        "base_url": "granular-field-permissions",
+        "camel_name": "GranularFieldPermissions",
+        "project_short_description": "Granular Field Permissions",
+        "model_class_name": "GranularFieldPermissionsExampleModel",
+        "open_source_license": "Apache-2.0",
+        "docs_base_url": "https://docs.nautobot.com",
+        "docs_app_url": "https://docs.nautobot.com/projects/granular-field-permissions/en/latest",
+        "__commercial": false,
+        "_extensions": [
+            "local_extensions.camel_case_to_kebab",
+            "local_extensions.camel_case_to_words",
+            "local_extensions.NautobotVersions"
+        ],
+        "_template": "https://github.com/nautobot/cookiecutter-nautobot-app",
+        "_output_dir": "/Users/federico/git",
+        "_repo_dir": "/Users/federico/.cookiecutters/cookiecutter-nautobot-app/nautobot-app",
+        "_checkout": null
+    }
+}

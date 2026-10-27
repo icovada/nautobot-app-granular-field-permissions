@@ -1,0 +1,16 @@
+---
+granular_field_permissions:
+  nautobot_ver: "3.1.0"
+  python_ver: "3.12"
+  # local: false
+  # ephemeral_ports: false
+  # compose_dir: "/full/path/to/nautobot-app-granular-field-permissions/development"
+
+# The following is an example of using MySQL as the database backend
+# ---
+# granular_field_permissions:
+#   compose_files:
+#     - "docker-compose.base.yml"
+#     - "docker-compose.redis.yml"
+#     - "docker-compose.mysql.yml"
+#     - "docker-compose.dev.yml"
