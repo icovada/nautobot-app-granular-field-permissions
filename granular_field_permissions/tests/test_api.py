@@ -6,21 +6,21 @@ from granular_field_permissions import models
 from granular_field_permissions.tests import fixtures
 
 
-class GranularFieldPermissionsExampleModelAPIViewTest(APIViewTestCases.APIViewTestCase):
+class ContentTypeRuleSetAPIViewTest(APIViewTestCases.APIViewTestCase):
     # pylint: disable=too-many-ancestors
-    """Test the API viewsets for GranularFieldPermissionsExampleModel."""
+    """Test the API viewsets for ContentTypeRuleSet."""
 
-    model = models.GranularFieldPermissionsExampleModel
+    model = models.ContentTypeRuleSet
     # Any choice fields will require the choices_fields to be set
     # to the field names in the model that are choice fields.
     choices_fields = ()
 
     @classmethod
     def setUpTestData(cls):
-        """Create test data for GranularFieldPermissionsExampleModel API viewset."""
+        """Create test data for ContentTypeRuleSet API viewset."""
         super().setUpTestData()
         # Create 3 objects for the generic API test cases.
-        fixtures.create_granularfieldpermissionsexamplemodel()
+        fixtures.create_ContentTypeRuleSet()
         # Create 3 objects for the api test cases.
         cls.create_data = [
             {

@@ -7,20 +7,20 @@ from nautobot.apps.forms import NautobotBulkEditForm, NautobotFilterForm, Nautob
 from granular_field_permissions import models
 
 
-class GranularFieldPermissionsExampleModelForm(NautobotModelForm):  # pylint: disable=too-many-ancestors
-    """GranularFieldPermissionsExampleModel creation/edit form."""
+class ContentTypeRuleSetForm(NautobotModelForm):  # pylint: disable=too-many-ancestors
+    """ContentTypeRuleSet creation/edit form."""
 
     class Meta:
         """Meta attributes."""
 
-        model = models.GranularFieldPermissionsExampleModel
+        model = models.ContentTypeRuleSet
         fields = "__all__"
 
 
-class GranularFieldPermissionsExampleModelBulkEditForm(TagsBulkEditFormMixin, NautobotBulkEditForm):  # pylint: disable=too-many-ancestors
-    """GranularFieldPermissionsExampleModel bulk edit form."""
+class ContentTypeRuleSetBulkEditForm(TagsBulkEditFormMixin, NautobotBulkEditForm):  # pylint: disable=too-many-ancestors
+    """ContentTypeRuleSet bulk edit form."""
 
-    pk = forms.ModelMultipleChoiceField(queryset=models.GranularFieldPermissionsExampleModel.objects.all(), widget=forms.MultipleHiddenInput)
+    pk = forms.ModelMultipleChoiceField(queryset=models.ContentTypeRuleSet.objects.all(), widget=forms.MultipleHiddenInput)
     description = forms.CharField(required=False, max_length=CHARFIELD_MAX_LENGTH)
 
     class Meta:
@@ -31,10 +31,10 @@ class GranularFieldPermissionsExampleModelBulkEditForm(TagsBulkEditFormMixin, Na
         ]
 
 
-class GranularFieldPermissionsExampleModelFilterForm(NautobotFilterForm):  # pylint: disable=too-many-ancestors
+class ContentTypeRuleSetFilterForm(NautobotFilterForm):  # pylint: disable=too-many-ancestors
     """Filter form to filter searches."""
 
-    model = models.GranularFieldPermissionsExampleModel
+    model = models.ContentTypeRuleSet
     field_order = ["q", "name"]
 
     q = forms.CharField(

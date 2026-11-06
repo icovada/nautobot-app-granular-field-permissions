@@ -6,14 +6,14 @@ from nautobot.apps.tables import BaseTable, ButtonsColumn, ToggleColumn
 from granular_field_permissions import models
 
 
-class GranularFieldPermissionsExampleModelTable(BaseTable):
+class ContentTypeRuleSetTable(BaseTable):
     # pylint: disable=R0903
     """Table for list view."""
 
     pk = ToggleColumn()
     name = tables.Column(linkify=True)
     actions = ButtonsColumn(
-        models.GranularFieldPermissionsExampleModel,
+        models.ContentTypeRuleSet,
         # Option for modifying the default action buttons on each row:
         # buttons=("changelog", "edit", "delete"),
         # Option for modifying the pk for the action buttons:
@@ -23,7 +23,7 @@ class GranularFieldPermissionsExampleModelTable(BaseTable):
     class Meta(BaseTable.Meta):
         """Meta attributes."""
 
-        model = models.GranularFieldPermissionsExampleModel
+        model = models.ContentTypeRuleSet
         fields = (
             "pk",
             "name",

@@ -6,12 +6,12 @@ from granular_field_permissions import filters, models
 from granular_field_permissions.api import serializers
 
 
-class GranularFieldPermissionsExampleModelViewSet(NautobotModelViewSet):  # pylint: disable=too-many-ancestors
-    """GranularFieldPermissionsExampleModel viewset."""
+class ContentTypeRuleSetViewSet(NautobotModelViewSet):  # pylint: disable=too-many-ancestors
+    """ContentTypeRuleSet viewset."""
 
-    queryset = models.GranularFieldPermissionsExampleModel.objects.all()
-    serializer_class = serializers.GranularFieldPermissionsExampleModelSerializer
-    filterset_class = filters.GranularFieldPermissionsExampleModelFilterSet
+    queryset = models.ContentTypeRuleSet.objects.all()
+    serializer_class = serializers.ContentTypeRuleSetSerializer
+    filterset_class = filters.ContentTypeRuleSetFilterSet
 
     # Option for modifying the default HTTP methods:
     # http_method_names = ["get", "post", "put", "patch", "delete", "head", "options", "trace"]

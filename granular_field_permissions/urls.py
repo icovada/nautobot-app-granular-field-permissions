@@ -14,7 +14,7 @@ router = NautobotUIViewSetRouter()
 
 # The standard is for the route to be the hyphenated version of the model class name plural.
 # for example, ExampleModel would be example-models.
-router.register("granular-field-permissions-example-models", views.GranularFieldPermissionsExampleModelUIViewSet)
+router.register("granular-field-permissions-example-models", views.ContentTypeRuleSetUIViewSet)
 
 
 urlpatterns = [

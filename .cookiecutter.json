@@ -12,7 +12,7 @@
         "base_url": "granular-field-permissions",
         "camel_name": "GranularFieldPermissions",
         "project_short_description": "Granular Field Permissions",
-        "model_class_name": "GranularFieldPermissionsExampleModel",
+        "model_class_name": "ContentTypeRuleSet",
         "open_source_license": "Apache-2.0",
         "docs_base_url": "https://docs.nautobot.com",
         "docs_app_url": "https://docs.nautobot.com/projects/granular-field-permissions/en/latest",

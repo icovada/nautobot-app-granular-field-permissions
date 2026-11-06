@@ -4,13 +4,13 @@ from nautobot.apps.ui import NavMenuAddButton, NavMenuGroup, NavMenuItem, NavMen
 
 items = (
     NavMenuItem(
-        link="plugins:granular_field_permissions:granularfieldpermissionsexamplemodel_list",
+        link="plugins:granular_field_permissions:ContentTypeRuleSet_list",
         name="Granular Field Permissions",
-        permissions=["granular_field_permissions.view_granularfieldpermissionsexamplemodel"],
+        permissions=["granular_field_permissions.view_ContentTypeRuleSet"],
         buttons=(
             NavMenuAddButton(
-                link="plugins:granular_field_permissions:granularfieldpermissionsexamplemodel_add",
-                permissions=["granular_field_permissions.add_granularfieldpermissionsexamplemodel"],
+                link="plugins:granular_field_permissions:ContentTypeRuleSet_add",
+                permissions=["granular_field_permissions.add_ContentTypeRuleSet"],
             ),
         ),
     ),

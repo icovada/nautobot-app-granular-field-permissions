@@ -1,4 +1,4 @@
-"""Test GranularFieldPermissionsExampleModel Filter."""
+"""Test ContentTypeRuleSet Filter."""
 
 from nautobot.apps.testing import FilterTestCases
 
@@ -6,11 +6,11 @@ from granular_field_permissions import filters, models
 from granular_field_permissions.tests import fixtures
 
 
-class GranularFieldPermissionsExampleModelFilterTestCase(FilterTestCases.FilterTestCase):  # pylint: disable=too-many-ancestors
-    """GranularFieldPermissionsExampleModel Filter Test Case."""
+class ContentTypeRuleSetFilterTestCase(FilterTestCases.FilterTestCase):  # pylint: disable=too-many-ancestors
+    """ContentTypeRuleSet Filter Test Case."""
 
-    queryset = models.GranularFieldPermissionsExampleModel.objects.all()
-    filterset = filters.GranularFieldPermissionsExampleModelFilterSet
+    queryset = models.ContentTypeRuleSet.objects.all()
+    filterset = filters.ContentTypeRuleSetFilterSet
     generic_filter_tests = (
         ("id",),
         ("created",),
@@ -20,15 +20,15 @@ class GranularFieldPermissionsExampleModelFilterTestCase(FilterTestCases.FilterT
 
     @classmethod
     def setUpTestData(cls):
-        """Setup test data for GranularFieldPermissionsExampleModel Model."""
-        fixtures.create_granularfieldpermissionsexamplemodel()
+        """Setup test data for ContentTypeRuleSet Model."""
+        fixtures.create_ContentTypeRuleSet()
 
     def test_q_search_name(self):
-        """Test using Q search with name of GranularFieldPermissionsExampleModel."""
+        """Test using Q search with name of ContentTypeRuleSet."""
         params = {"q": "Test One"}
         self.assertEqual(self.filterset(params, self.queryset).qs.count(), 1)
 
     def test_q_invalid(self):
-        """Test using invalid Q search for GranularFieldPermissionsExampleModel."""
+        """Test using invalid Q search for ContentTypeRuleSet."""
         params = {"q": "test-five"}
         self.assertEqual(self.filterset(params, self.queryset).qs.count(), 0)

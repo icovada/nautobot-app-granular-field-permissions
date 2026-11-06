@@ -5,13 +5,13 @@ from nautobot.apps.api import NautobotModelSerializer, TaggedModelSerializerMixi
 from granular_field_permissions import models
 
 
-class GranularFieldPermissionsExampleModelSerializer(NautobotModelSerializer, TaggedModelSerializerMixin):  # pylint: disable=too-many-ancestors
-    """GranularFieldPermissionsExampleModel Serializer."""
+class ContentTypeRuleSetSerializer(NautobotModelSerializer, TaggedModelSerializerMixin):  # pylint: disable=too-many-ancestors
+    """ContentTypeRuleSet Serializer."""
 
     class Meta:
         """Meta attributes."""
 
-        model = models.GranularFieldPermissionsExampleModel
+        model = models.ContentTypeRuleSet
         fields = "__all__"
 
         # Option for disabling write for certain fields:

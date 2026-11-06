@@ -8,17 +8,17 @@ from granular_field_permissions import filters, forms, models, tables
 from granular_field_permissions.api import serializers
 
 
-class GranularFieldPermissionsExampleModelUIViewSet(NautobotUIViewSet):
-    """ViewSet for GranularFieldPermissionsExampleModel views."""
+class ContentTypeRuleSetUIViewSet(NautobotUIViewSet):
+    """ViewSet for ContentTypeRuleSet views."""
 
-    bulk_update_form_class = forms.GranularFieldPermissionsExampleModelBulkEditForm
-    filterset_class = filters.GranularFieldPermissionsExampleModelFilterSet
-    filterset_form_class = forms.GranularFieldPermissionsExampleModelFilterForm
-    form_class = forms.GranularFieldPermissionsExampleModelForm
+    bulk_update_form_class = forms.ContentTypeRuleSetBulkEditForm
+    filterset_class = filters.ContentTypeRuleSetFilterSet
+    filterset_form_class = forms.ContentTypeRuleSetFilterForm
+    form_class = forms.ContentTypeRuleSetForm
     lookup_field = "pk"
-    queryset = models.GranularFieldPermissionsExampleModel.objects.all()
-    serializer_class = serializers.GranularFieldPermissionsExampleModelSerializer
-    table_class = tables.GranularFieldPermissionsExampleModelTable
+    queryset = models.ContentTypeRuleSet.objects.all()
+    serializer_class = serializers.ContentTypeRuleSetSerializer
+    table_class = tables.ContentTypeRuleSetTable
 
     # Here is an example of using the UI  Component Framework for the detail view.
     # More information can be found in the Nautobot documentation:
@@ -44,9 +44,9 @@ class GranularFieldPermissionsExampleModelUIViewSet(NautobotUIViewSet):
             # ObjectsTablePanel(
                 # weight=200,
                 # section=SectionChoices.RIGHT_HALF,
-                # table_class=tables.GranularFieldPermissionsExampleModelTable,
+                # table_class=tables.ContentTypeRuleSetTable,
                 # You will want to filter the table using the related_name
-                # filter="granularfieldpermissionsexamplemodels",
+                # filter="ContentTypeRuleSets",
             # ),
         ],
     )

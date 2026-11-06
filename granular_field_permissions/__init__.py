@@ -20,19 +20,19 @@ class GranularFieldPermissionsConfig(NautobotAppConfig):
     required_settings = []
     default_settings = {}
     docs_view_name = "plugins:granular_field_permissions:docs"
-    searchable_models = ["granularfieldpermissionsexamplemodel"]
+    searchable_models = ["ContentTypeRuleSet"]
 
     def ready(self):
-        """Register runtime-generated CustomValidators once the app registry is populated."""
+        """Register field permission validators and their cache invalidation signals."""
         super().ready()
 
         from granular_field_permissions.validators import (  # pylint: disable=import-outside-toplevel
-            register_runtime_validators,
+            register_field_permission_validators,
         )
 
         # Deferred: this module is imported before Django's app registry is populated, and `validators`
-        # imports `nautobot.apps.models`, which loads model classes.
-        register_runtime_validators()
+        # imports this app's models.
+        register_field_permission_validators()
 
 
 config = GranularFieldPermissionsConfig  # pylint:disable=invalid-name

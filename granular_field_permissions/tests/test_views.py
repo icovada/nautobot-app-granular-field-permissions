@@ -6,11 +6,11 @@ from granular_field_permissions import models
 from granular_field_permissions.tests import fixtures
 
 
-class GranularFieldPermissionsExampleModelViewTest(ViewTestCases.PrimaryObjectViewTestCase):
+class ContentTypeRuleSetViewTest(ViewTestCases.PrimaryObjectViewTestCase):
     # pylint: disable=too-many-ancestors
-    """Test the GranularFieldPermissionsExampleModel views."""
+    """Test the ContentTypeRuleSet views."""
 
-    model = models.GranularFieldPermissionsExampleModel
+    model = models.ContentTypeRuleSet
     bulk_edit_data = {"description": "Bulk edit views"}
     form_data = {
         "name": "Test 1",
@@ -24,4 +24,4 @@ class GranularFieldPermissionsExampleModelViewTest(ViewTestCases.PrimaryObjectVi
 
     @classmethod
     def setUpTestData(cls):
-        fixtures.create_granularfieldpermissionsexamplemodel()
+        fixtures.create_ContentTypeRuleSet()
